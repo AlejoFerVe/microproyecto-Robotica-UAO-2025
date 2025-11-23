@@ -31,7 +31,7 @@ mkdir -p ~/micro_ws/src
 cd ~/micro_ws/src
 
 # Clonar repositorio
-git clone [URL_DEL_REPOSITORIO] rc_model
+git clone https://github.com/AlejoFerVe/microproyecto-Robotica-UAO-2025.git rc_model
 
 # Compilar
 cd ~/micro_ws
@@ -59,12 +59,6 @@ Esto abrirá:
 ros2 launch rc_model gazebo_rc.launch.py
 ```
 
-## 🎯 Control del Robot
-
-Una vez lanzado RViz o Gazebo, usa la ventana **Joint State Publisher** para controlar el robot:
-
-- **Slider prismatic_x**: Movimiento en eje X (-5.0 a 5.0 metros)
-- **Slider prismatic_y**: Movimiento en eje Y (-5.0 a 5.0 metros)
 
 ## 📁 Estructura del Proyecto
 
