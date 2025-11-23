@@ -78,6 +78,7 @@ rc_model/
 └── README.md
 ```
 
+
 ## 🔧 Características Técnicas
 
 ### Articulaciones
