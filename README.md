@@ -111,15 +111,16 @@ Este robot fue diseñado para monitoreo de calidad de agua en lagos de pesca, pe
 
 ## 👥 Autores
 
-| Nombre              | Rol                    | Email/Contacto        |
+| Nombre              | Email/Contacto        |
 |---------------------|------------------------|-----------------------|
-| [Nombre 1]          | [Rol en el proyecto]   | [email@ejemplo.com]   |
-| [Nombre 2]          | [Rol en el proyecto]   | [email@ejemplo.com]   |
-| [Nombre 3]          | [Rol en el proyecto]   | [email@ejemplo.com]   |
+| Alejandro Fernandez Velasco
+          | alejandro.fernande_v@uao.edu.co |
+| Santiago Aguilar Posada| santiago.aguilar@uao.edu.co|
+| Valentina Ramirez Jaramillo| valentina.ramirez_j@uao.edu.co  |
 
 ## 🏫 Información Académica
 
-- **Universidad**: [Nombre de la universidad]
+- **Universidad**: Autonoma de Occidente
 - **Materia**: Robótica
 - **Tipo de proyecto**: Microproyecto
 - **Fecha**: Noviembre 2025
@@ -128,30 +129,6 @@ Este robot fue diseñado para monitoreo de calidad de agua en lagos de pesca, pe
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 🙏 Agradecimientos
 
-- Profesor/a de Robótica
-- Comunidad de ROS2
-- Equipo de desarrollo
-
-## 🐛 Solución de Problemas
-
-### El modelo no aparece en RViz
-
-1. Verifica que "Fixed Frame" esté en "base_link"
-2. Haz zoom (el modelo es pequeño, escala 0.001)
-3. Deshabilita y vuelve a habilitar "RobotModel"
-
-### Los joints no se mueven
-
-1. Verifica que Joint State Publisher GUI esté corriendo
-2. Revisa que los sliders estén habilitados
-3. Reinicia el launch file
-
-## 📞 Contacto
-
-Para preguntas o sugerencias, contacta a los autores del proyecto.
-
----
 
 **Microproyecto de Robótica** | ROS2 Jazzy | 2025
