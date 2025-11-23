@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<robot name="rc_model">
+
+  <!-- Base link - punto de referencia fijo (root link) -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="transparent">
+        <color rgba="1.0 1.0 1.0 0.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Slider en X -->
+  <link name="slider_x">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Joint prismático para movimiento en X -->
+  <joint name="prismatic_x" type="prismatic">
+    <parent link="base_link"/>
+    <child link="slider_x"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-5.0" upper="5.0" effort="100.0" velocity="1.0"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+
+  <!-- Slider en Y -->
+  <link name="slider_y">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Joint prismático para movimiento en Y -->
+  <joint name="prismatic_y" type="prismatic">
+    <parent link="slider_x"/>
+    <child link="slider_y"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-5.0" upper="5.0" effort="100.0" velocity="1.0"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+
+  <!-- Link del modelo RC (el STL) -->
+  <link name="rc_body">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="2.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159"/>
+      <geometry>
+        <mesh filename="file://$(find rc_model)/meshes/rc_v12.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.2 0.4 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159"/>
+      <geometry>
+        <mesh filename="file://$(find rc_model)/meshes/rc_v12.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint fijo del slider_y al cuerpo RC -->
+  <joint name="slider_to_body" type="fixed">
+    <parent link="slider_y"/>
+    <child link="rc_body"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Propiedades de Gazebo para materiales visuales -->
+  <gazebo reference="rc_body">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <static>false</static>
+  </gazebo>
+
+</robot>

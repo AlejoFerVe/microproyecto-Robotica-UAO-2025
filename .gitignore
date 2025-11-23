@@ -1,0 +1,56 @@
+# ROS2 Build files
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+*.egg
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.pydevproject
+.settings/
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.bak
+*.tmp
+*~
+
+# ROS
+*.autosave
+
+# Compiled files
+*.o
+*.lo
+*.la
+*.al
+.libs
+
+# Coverage
+.coverage
+htmlcov/
+
+# Logs
+*.log
