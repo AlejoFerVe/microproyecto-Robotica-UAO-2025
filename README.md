@@ -112,11 +112,10 @@ Este robot fue diseñado para monitoreo de calidad de agua en lagos de pesca, pe
 ## 👥 Autores
 
 | Nombre              | Email/Contacto        |
-|---------------------|------------------------|-----------------------|
-| Alejandro Fernandez Velasco
-          | alejandro.fernande_v@uao.edu.co |
-| Santiago Aguilar Posada| santiago.aguilar@uao.edu.co|
-| Valentina Ramirez Jaramillo| valentina.ramirez_j@uao.edu.co  |
+|---------------------|------------------------|
+| Alejandro Fernandez Velasco|  alejandro.fernande_v@uao.edu.co |
+| Santiago Aguilar Posada | santiago.aguilar@uao.edu.co|
+| Valentina Ramirez Jaramillo | valentina.ramirez_j@uao.edu.co  |
 
 ## 🏫 Información Académica
 
